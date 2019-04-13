@@ -7,6 +7,6 @@ if grep -q server.startup.web.timeout $ambari_properties_file; then
     $ambari_properties_file >> server.startup.web.timeout=$1
     
 else
-    $ambari_properties_file >> server.startup.web.timeout=$1
+     echo server.startup.web.timeout=$1 >> $ambari_properties_file
     
 fi
